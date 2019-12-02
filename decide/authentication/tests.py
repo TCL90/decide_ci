@@ -70,9 +70,6 @@ class AuthTestCase(APITestCase):
 
         response = self.client.post('/authentication/getuser/', token, format='json')
         self.assertEqual(response.status_code, 404)
-        
-    def test_basic_addition(self):
-        self.assertEqual(1 + 1, 2)
 
     def test_logout(self):
         data = {'username': 'voter1', 'password': '123'}
